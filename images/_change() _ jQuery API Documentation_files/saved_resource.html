@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://api.jquery.com/change/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>change demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="./jquery-3.4.1.js.download"></script>
+<style>html, body { border:0; margin:0; padding:0; }body { font-family: 'Helvetica', 'Arial',  'Verdana', 'sans-serif'; }</style></head>
+<body>
+ 
+<select name="sweets" multiple="multiple">
+  <option>Chocolate</option>
+  <option selected="selected">Candy</option>
+  <option>Taffy</option>
+  <option selected="selected">Caramel</option>
+  <option>Fudge</option>
+  <option>Cookie</option>
+</select>
+<div>Candy Caramel </div>
+ 
+<script>window.onload = function() {
+$( "select" )
+  .change(function () {
+    var str = "";
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+    $( "div" ).text( str );
+  })
+  .change();
+};</script>
+ 
+
+</body></html>
